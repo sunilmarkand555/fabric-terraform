@@ -1,13 +1,12 @@
 terraform {
-  required_version = ">= 1.5.0"
+  required_version = ">= 1.8, < 2.0"
   required_providers {
     fabric = {
       source  = "microsoft/fabric"
-      version = ">= 0.1.0" # Ensure you use the latest verified version
+      version = "1.10.0"
     }
   }
 }
 
-provider "fabric" {
-  # Authentication can be handled via environment variables or Service Principal
-}
+# Configure the Microsoft Fabric Provider
+provider "fabric" {}
